@@ -1,0 +1,150 @@
+.hyflickr-title {
+    float: left;
+    width: auto;
+    font-size: 1.6em;
+    line-height: 1.3;
+}
+
+.hyflickr-back {
+    float: right;
+    line-height: 1.3;
+}
+
+.hyflickr-gallery {
+    width: 765px;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.hyflickr-gallery li {
+    display: inline-block;
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.hyflickr-gallery li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.hyflickr-gallery li .overlay {
+    position: absolute;
+    display: block;
+    width: 180px;
+    height: 180px;
+    background-color: rgba(75, 150, 34, 0.66);
+    -webkit-transition: opacity 300ms ease-out;
+    transition: opacity 300ms ease-out;
+    opacity: 0;
+
+    text-align: center;
+    line-height: 180px;
+    color: #FFFFFF;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.hyflickr-gallery li:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.hyflickr-gallery li .overlay .title {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.hyflickr-gallery li img {
+    display: block;
+    float: left;
+    min-width: 180px;
+    min-height: 180px;
+    max-width: none;
+    max-height: none;
+    height: auto;
+    width: auto;
+    margin:auto;
+}
+
+.hyflickr-pagination {
+    width: 100%;
+    text-align: center;
+    list-style: none;
+}
+
+.hyflickr-pagination li {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+}
+
+.hyflickr-pagination li a {
+    display: block;
+
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    line-height: 35px;
+    font-size: 15px;
+    color: #000000;
+    background-color: #CCCCCC;
+}
+
+.hyflickr-pagination li.current a, .hyflickr-pagination li.current:hover a {
+    background-color: #4B9622;
+    color: #FFFFFF;
+}
+
+.hyflickr-pagination li a:hover {
+    background-color: #888888;
+}
+
+.fancybox-button.hyflickr-download::after {
+    background-image: url('../img/download.svg');
+    background-size: 17px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-color: transparent;
+}
+
+@media only screen and (max-device-width : 768px) {
+    .hyflickr-gallery {
+        width: 300px;
+    }
+    
+    .hyflickr-gallery li {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .hyflickr-gallery li .overlay {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+    }
+    
+    .hyflickr-gallery li .overlay .title {
+        line-height: 14px;
+        font-size: 11px;    
+    }
+    
+    .hyflickr-gallery li img {
+        min-width: 60px;
+        min-height: 60px;
+        max-width: 100px;
+        max-height: 100px;
+    }
+    
+}
