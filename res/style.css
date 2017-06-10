@@ -109,7 +109,7 @@
 }
 
 .fancybox-button.hyflickr-download::after {
-    background-image: url('../img/download.svg');
+    background-image: url('img/download.svg');
     background-size: 17px auto;
     background-repeat: no-repeat;
     background-position: center;
