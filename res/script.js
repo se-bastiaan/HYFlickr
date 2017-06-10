@@ -4,7 +4,7 @@ jQuery(function ($) {
         fullScreen: false,
         thumbs: false,
         afterMove: function (instance, item) {
-            var downloadButton = $(instance.$refs.buttons).find('.fancybox-button--download');
+            var downloadButton = $(instance.$refs.buttons).find('.hyflickr-download');
             if (downloadButton.length > 0) {
                 downloadButton.attr('href', $(item.opts.$orig).attr('data-download'));
             } else {

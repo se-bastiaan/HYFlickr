@@ -75,6 +75,11 @@ class HYFlickrFrontend
     {
         $page = get_query_var('hyflickr_page') ? get_query_var('hyflickr_page') : 1;
         $response = $this->phpFlickr->photosets_getList($this->options[HYFlickrOptions::API_USER], $page, 16);
+        
+        if ($response['pages'] > 1 && $response['perpage'] > count($response['photoset'])) {
+            $response['pages'] = 1;
+            $response['total'] = count($response['photoset']);
+        }
 
         $returnVal = '<ul class="hyflickr-gallery hyflickr-albums">';
         foreach ($response['photoset'] as $photoset) {
